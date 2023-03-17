@@ -5,7 +5,7 @@
   color:#262626;
 }
 
-.div_Main_rootBoard{
+.App{
   padding:50px 100px 50px 100px;
 }
 
@@ -47,4 +47,13 @@
 
 .div_Navigate_btnArea>button:not(:last-child){
   margin-right: 5px;
+}
+
+.div_Quiz4_rootBoard>ul>li:hover{
+  font-weight: 700;
+  background-color: #ffef0c;
+}
+
+.div_Quiz4_rootBoard>h1::first-letter{
+  color: #0c30ff;
 }

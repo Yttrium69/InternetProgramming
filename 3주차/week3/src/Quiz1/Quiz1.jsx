@@ -1,9 +1,12 @@
 import React from 'react';
+import Navigate from '../All/Navigate';
+import BtnArray from './BtnArray';
 
 function Quiz1(props) {
     return (
         <div>
-            hi
+            {props.Nav}
+            <BtnArray></BtnArray>
         </div>
     );
 }
