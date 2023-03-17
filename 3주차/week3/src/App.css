@@ -1,0 +1,50 @@
+*{
+  margin:0px;
+  padding: 0px;
+  font-family: 'Noto Sans KR';
+  color:#262626;
+}
+
+.div_Main_rootBoard{
+  padding:50px 100px 50px 100px;
+}
+
+.div_Navigate_rootBoard>.title{
+  font-size:36px;
+  font-weight: 700;
+}
+
+.div_Navigate_rootBoard>.subTitle{
+  font-size:18px;
+  color:#7e7e7e
+}
+
+.div_Navigate_btnArea{
+  padding-top:20px;
+  margin-bottom:30px;
+}
+
+.div_Navigate_btnArea>button{
+  font-size:18px;
+  width:100px;
+  height:50px;
+  border-radius: 50px;
+  border:none;
+  background-color: #e8e8e8;
+  border: 2px solid #bababa;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.div_Navigate_btnArea>button:hover{
+  cursor: pointer;
+  background-color: #d7d7d7
+}
+
+.div_Navigate_btnArea>button:active{
+  background-color: #a2a2a2;
+}
+
+.div_Navigate_btnArea>button:not(:last-child){
+  margin-right: 5px;
+}
