@@ -1,45 +1,33 @@
-// import React from 'react';
-
-// function Quiz3(props) {
-//     let ret=prompt("enter your name");
-//     let line;
-//     if(ret=="토"||ret=="일"){
-//         line="휴무";
-//     }
-//     else{
-//         line="출근";
-//     }
-//     return (
-//         <div>
-//             {props.Nav}
-//             <p>{ret+"는 "+line}</p>
-//         </div>
-//     );
-// }
-
-// export default Quiz3;
-
-
 import React from 'react';
 
 function Quiz3(props) {
-    let n=[0, 1, 2, 3, 4, 5, 6, 7, 8,9]
+    let n=[];
+    const cnt=9;
+
+    for(let i=0;i<cnt+1;i++) n.push(i);
     return (
         <div>
             {props.Nav}
-            <table border={1}>
-                <th><tr>n</tr><tr>n^2</tr></th>
-                {n.map(
-                    function(n){
-                        let nSquare=n*n;
-                        return(
-                            <td>
-                            <tr>{n}</tr>
-                            <tr>{nSquare}</tr></td>
-                        )
-                    }
-                )}
-            </table>
+            <div class="div_Quiz3_contents">
+                <div>
+                    <h1>Quiz3</h1>
+                    <br/><hr/><br/><br/><br/>
+                </div>
+                <table border="1">
+                    <th><tr><td>n</td></tr><tr><td>n&sup2;</td></tr></th>
+                    {n.map(
+                        function(n){
+                            let nSquare=n*n;
+                            return(
+                                <td>
+                                    <tr><td>{n}</td></tr>
+                                    <tr><td>{nSquare}</td></tr>
+                                </td>
+                            )
+                        }
+                    )}
+                </table>
+            </div>
         </div>
     );
 }

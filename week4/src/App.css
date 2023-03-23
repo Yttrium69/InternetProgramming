@@ -25,28 +25,41 @@
 }
 
 .div_Navigate_btnArea>button{
+
   font-size:18px;
-  width:100px;
+  width:120px;
   height:50px;
   border-radius: 50px;
   border:none;
   background-color: #e8e8e8;
-  border: 2px solid #bababa;
+  /* border: 2px solid #bababa; */
   margin-bottom: 5px;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.div_Navigate_btnArea>button:hover{
-  cursor: pointer;
-  background-color: #d7d7d7
+.div_Navigate_btnArea>button:hover {
+  color:white;
+  cursor:pointer;
+  background-size: 250% auto;
+  background-position: right center;
+  background-image: linear-gradient(to right, #a0b3c1 0%, #0d5adf 51%, #ffb2d2 100%);
+   /* change the direction of the change here */
+  /* background-image: linear-gradient(to right, #a0b3c1 0%, #0d5adf 51%, #4a07be 100%); */
 }
 
 .div_Navigate_btnArea>button:active{
-  background-color: #a2a2a2;
+  color:white;
+
+
+}
+
+.div_Navigate_btnArea .selector{
+  color:white;
+  background-color: #0d5adf;
 }
 
 .div_Navigate_btnArea>button:not(:last-child){
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 .div_Quiz2_rootBoard{
@@ -91,7 +104,7 @@
   font-size:28px;
 }
 .header4{
-  font-weight: 5;
+  font-weight: 500;
   font-size:24px;
 }
 .header5{
@@ -109,10 +122,52 @@
 .img_Quiz1{
   margin-left: 300px;
   width:100px;
-  background-color: red;
-  background-image: "spongebob.png";
+  background-image: url("../public/spongebob.png");
+  background-size: contain;
 }
 
-.Quiz2 tr:nth-child(even){
-  background-color: aqua;
+.div_Quiz2_contents table{
+  border: 1px solid #262626;
+  border-collapse: collapse;
+  width:200px;
+
 }
+
+.div_Quiz2_contents th{
+  border: 1px solid #262626;
+  color:rgb(255, 0, 68);
+  background-color: skyblue;
+  height:20px;
+  padding: 10px;
+}
+
+.div_Quiz2_contents tr td{
+  border: 1px solid #262626;
+  width:100px;
+  height:20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.div_Quiz2_contents tr:nth-child(odd){
+  background-color: rgb(0, 255, 179);
+}
+
+.div_Quiz3_contents table{
+  background-color: yellow;
+  border-collapse: collapse;
+}
+
+.div_Quiz3_contents table th{
+  width:30px;
+  height:10px;
+  border: 0.2px solid #262626;
+}
+
+.div_Quiz3_contents table td{
+  width:30px;
+  height:10px;
+  border: #262626 solid 0.1px;
+  border-collapse: collapse;
+}
+

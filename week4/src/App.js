@@ -16,16 +16,15 @@ function App() {
   return (
     <div className="App">
       <Router>
+      {Nav}
           <Routes>
-            <Route path="/" element={<Main Nav={Nav}></Main>}></Route>
+            <Route path="/" element={<Main></Main>}></Route>
             <Route path={"/Quiz/1"}
-            element={<Quiz1 Nav={Nav}></Quiz1>}></Route>
+            element={<Quiz1></Quiz1>}></Route>
             <Route path={"/Quiz/2"}
-            element={<Quiz2 Nav={Nav}></Quiz2>}></Route>
+            element={<Quiz2></Quiz2>}></Route>
             <Route path={"/Quiz/3"}
-            element={<Quiz3 Nav={Nav}></Quiz3>}></Route>
-            {/* <Route path={"/Quiz/4"}
-            element={<Quiz4 Nav={Nav}></Quiz4>}></Route> */}
+            element={<Quiz3></Quiz3>}></Route>
           </Routes>
       </Router>
     </div>

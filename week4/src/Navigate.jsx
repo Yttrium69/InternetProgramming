@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Navigate(props) {
     const cnt=props.cnt;
     const week=props.week;
     const arr=[];
+
+    const [selector, setSelector]=useState("1");
 
     const nav=useNavigate();
     const goTo = (goTo) => {
@@ -23,10 +25,13 @@ function Navigate(props) {
                 {arr.map(
                     function(num){
                         return(
-                            <button class="btn_quiz"
+                            <button 
+                            class={`${selector == num ? 'selector' : ''}`}
                             onClick={function(){
+                                setSelector(num);
                                 goTo(num);
                             }}
+                            
                             >{"Quiz "+num}</button>
                         )
                     }
