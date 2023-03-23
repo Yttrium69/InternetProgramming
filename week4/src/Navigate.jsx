@@ -6,7 +6,7 @@ function Navigate(props) {
     const week=props.week;
     const arr=[];
 
-    const [selector, setSelector]=useState("1");
+    const [selector, setSelector]=useState("");
 
     const nav=useNavigate();
     const goTo = (goTo) => {
