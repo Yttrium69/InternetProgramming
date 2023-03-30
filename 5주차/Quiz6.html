@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz6_12224431_임은혜</title>
+</head>
+<body>
+    <style>
+        .div_colorBox{
+            width:150px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        const Book=function Book(title, author, price){
+            this.title=title;
+            this.author=author;
+            this.price=price;
+        }
+
+        let expensiveNode=new Book("", "", -1);
+        let tmp=new Book("", "", -1);
+        for(let i=0;i<5;i++){
+            let lineArr=prompt(`enter title, author, price (${i+1}/5)`).split(',');
+            tmp=new Book(lineArr[0],lineArr[1],lineArr[2]);
+            if(expensiveNode.price<tmp.price) expensiveNode=tmp;
+
+            document.write(`<p>${tmp.title}, ${tmp.author}, ${tmp.price}<p>`);
+       }
+    </script>
+
+    <div>
+        <span class="text_label">가장 비싼 책 </span>
+        <script>document.write(expensiveNode.title)</script>
+    </div>
+</body>
+</html>

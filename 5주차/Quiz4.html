@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz4_12224431_임은혜</title>
+</head>
+<style>
+    .div_colorBox{
+        width:60px;
+        display: inline-block;
+    }
+</style>
+<body>
+    <script>
+        colorNameArr=["maroon", "red", "orange", "yellow", "olive", "purple", "fuchsia", "white", "lime", "green", "navy", "blue", "aqua", "teal", "black", "silver", "gray"];
+        for(let i=0;i<colorNameArr.length;i++){
+            const color=colorNameArr[i];
+            document.write(`<div class="div_colorBox" style="background-color:${color}">${color}</div>`);
+        }
+    </script>
+</body>
+</html>

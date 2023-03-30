@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz3_12224431_임은혜</title>
+</head>
+<body>
+    <style>
+        *{
+            color:#262626;
+        }
+        .text_label{
+            font-weight: 700;
+        }
+    </style>
+    <script>
+        const arr=["임은혜", "그레이스", "율양기", "나카무라", "늑대와함께춤을"];
+
+        let longestName="";
+        let nowName;
+
+        for(let i=0;i<arr.length;i++){
+            nowName=arr[i];
+            if(longestName.length<nowName.length) longestName=nowName;
+        }
+    </script>
+
+    <div>
+        <span class="text_label">이름 </span>
+        <script>document.write(arr)</script>
+    </div>
+    <div>
+        <span class="text_label">가장 긴 이름 </span>
+        <script>document.write(longestName)</script>
+    </div>
+    <div>
+        <span class="text_label">가장 긴 이름 </span>
+        <script>document.write(arr.sort()[0])</script>
+    </div>
+    <div>
+        <span class="text_label">증가순 이름 </span>
+        <script>document.write(arr.sort())</script>
+    </div>
+</html>
