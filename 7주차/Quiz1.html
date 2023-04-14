@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz1</title>
+
+    <script>
+        let pop=function pop_value(){
+            let checked_object=null;
+            let city_arr=document.getElementsByName("city");
+            for(let i=0;i<city_arr.length;i++){
+                if(city_arr[i].checked==true) checked_object=city_arr[i];
+            }
+            if (checked_object===null) alert(`Plsase check the religeon.`);
+            else alert(`let's go to ${checked_object.value}!`);
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input type="radio" name="city" value="Seoul"> Seoul
+        <input type="radio" name="city"  value="Incheon">Incheon
+        <input type="radio" name="city" value="Busan">Busan
+        <input type="radio" name="city" value="Sunchun">Sunchun
+        <button onclick=pop() type="submit">submit</button>
+    </form>
+</body>
+</html>

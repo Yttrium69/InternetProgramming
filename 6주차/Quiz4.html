@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12224431 임은혜</title>
+    <script>
+        function show_answer(self){
+            let prop=self.parentElement.innerText;
+            prop=prop.substring(0,prop.length-3);
+            self.innerHTML=eval(prop);
+            self.classList.remove("text_answer");
+        }
+    </script>
+</head>
+<style>
+    .text_answer{
+        color: rgb(180, 180, 180);
+        cursor: pointer;
+    }
+</style>
+<body>
+    <p>2+4=<span class="text_answer" onclick="show_answer(this)">정답</span></p>
+    <p>4*20+64=<span class="text_answer" onclick="show_answer(this)">정답</span></p>
+    <p>20/5-8*2=<span class="text_answer" onclick="show_answer(this)">정답</span></p>
+</body>
+</html>

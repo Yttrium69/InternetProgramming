@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12224431 임은혜</title>
+</head>
+<script>
+    function showPrompt(self){
+        let query=prompt("Enter wherever you wanna go");
+        self.innerHTML=query;
+        self.classList.remove("text_question");
+    }
+
+
+
+</script>
+<style>
+    .text_question:hover{
+        background-color: yellow;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <p class="text_question" onclick="showPrompt(this)">이번 여름엔 어디로 여행을 갈까요?</p>
+</body>
+</html>
