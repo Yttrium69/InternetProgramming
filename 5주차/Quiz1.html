@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz1_12224431_임은혜</title>
+</head>
+<script>
+    const arr=[];
+    let n;
+    for(let i=0;i<10;i++){
+        n=Math.floor(Math.random()*100)+1;
+        arr.push(n);
+    }
+</script>
+<body>
+    <h3>난수 10개 생성</h3>
+    <hr/>
+    <span><strong>난수 </strong></span> <script>document.write(arr.sort())</script><script>document.write(arr)</script>
+    <hr/>
+    <span><strong>가장 큰 수는 </strong></span> <script>document.write(arr.sort()[9])</script>
+    <hr/>
+    <span><strong>오름차순 정렬 </strong></span> <script>document.write(arr.sort())</script>
+    <hr/>
+    <span><strong>내림차순 정렬 </strong></span> <script>document.write(arr.sort())</script><script>document.write(arr.sort().reverse())</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12224431 임은혜</title>
+</head>
+<script>
+    function go_bottom(i){
+        imgArr=document.querySelectorAll("img");
+        document.write([i-1].style.zIndex+1);
+    }
+</script>
+<style>
+    img{
+        width:150px;
+        position: absolute;
+        z-index: 0;
+    }
+    img:hover{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <img onclick="go_bottom(1)" src="./img/spade-2.png">
+    <img onclick="go_bottom(2)" src="./img/spade-3.png">
+    <img onclick="go_bottom(3)" src="./img/spade-7.png">
+    <img onclick="go_bottom(4)" src="./img/spade-A.png">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz2_12224431_임은혜</title>
+</head>
+
+<body>
+    <script>
+        date=new Date();
+        let backcolor="yellow";
+        let fontColor="yellow";
+    
+        if(date.getDay()<4)  fontColor="red";
+        else fontColor="green";
+    
+        if(12<date.getHours()<24) backcolor="lightskyblue";
+        else backcolor="orange";
+    
+        document.body.style.backgroundColor=backcolor;
+        document.write(`<p style="color:${fontColor}">연도: ${date.getMonth()+1}</p>`);
+        document.write(`<p style="color:${fontColor}"><span><strong>현재 시간 </strong></span>${date.getHours()}시, ${date.getMinutes()}분, ${date.getSeconds()}초</p>`)
+    </script>
+</body>
+
+</html>

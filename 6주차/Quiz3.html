@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12224431 임은혜</title>
+
+    
+</head>
+
+<style>
+    button{
+    font-size:18px;
+    width:300px;
+    height:45px;
+    border-radius: 50px;
+    border:none;
+    background-color: #0066ff;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    margin-right: 5px;
+    font-weight: 300;
+    color: white;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+
+    .make_hide{
+        visibility: hidden;
+    }
+</style>
+<script>
+    function toggle_hide(){
+        if(document.querySelector('.make_hide')){
+            let elem_list=document.querySelectorAll('p');
+            for(let i=0;i<elem_list.length;i++){
+                elem_list[i].classList.remove("make_hide");
+            }
+        }
+        else{
+            let elem_list=document.querySelectorAll('p');
+            for(let i=0;i<elem_list.length;i++){
+                elem_list[i].classList.add("make_hide");
+            }
+        }
+    }
+    
+</script>
+<body>
+    
+    <button onclick="toggle_hide()" class="go" >show / hide</button>
+    <ul>
+        <li>I &#40;<p style="color:blue; display: inline;">love</p>&#41; you</li>
+        <li>CSS is Cascading &#40;<p style="color:blue; display: inline;">Style</p>&#41; Sheet</li>
+        <li>응답하라 &#40;<p style="color:blue; display: inline;">1988</p>&#41;</li>
+    </ul>
+</body>
+</html>

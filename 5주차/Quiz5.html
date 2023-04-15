@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz5_12224431_임은혜</title>
+</head>
+<body>
+    <style>
+        .div_colorBox{
+            width:150px;
+            display: inline-block;
+        }
+    </style>
+    <body>
+        <script>
+            function makeRandRGB(){
+                let rgbArr=[];
+                for(let i=0;i<3;i++) rgbArr.push(Math.floor(Math.random()*255));
+                return (`(${rgbArr[0]}, ${rgbArr[1]}, ${rgbArr[2]})`)
+            }
+           
+            let colorNum=16;
+            for(let i=0;i<colorNum;i++){
+                const color=makeRandRGB();
+                document.write(`<div class="div_colorBox" style="background-color:rgb${color}">${color}</div>`);
+            }
+        </script>
+    </body>
+</body>
+</html>

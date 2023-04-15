@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12224431 임은혜</title>
+</head>
+<script>
+    const week=6;
+    const quizNum=7;
+
+    document.write(`    
+        <p class="title">12224431 임은혜</p>
+        <p class="subTitle">${week}주차 과제</p>`
+    )
+
+    for(let i=0;i<quizNum;i++){
+            document.write(
+                `<button onClick="window.open('Quiz${i+1}.html')">Quiz${i+1}</button>`
+                );
+    }
+</script>
+<style>
+
+    body{
+      padding:50px 100px 50px 100px;
+    }
+
+    .title{
+      font-size:36px;
+      font-weight: 700;
+    }
+
+    .subTitle{
+      font-size:18px;
+      color:#7e7e7e
+    }
+
+    button{
+        font-size:18px;
+        width:100px;
+        height:45px;
+        border-radius: 50px;
+        border:none;
+        background-color: #e8e8e8;
+        /* border: 2px solid #bababa; */
+        margin-bottom: 5px;
+        transition: 0.5s;
+        margin-right: 5px;
+    }
+
+
+    button:hover {
+        color:white;
+        cursor:pointer;
+        background-size: 250% auto;
+        background-position: right center;
+        background-image: linear-gradient(to right, #a0b3c1 0%, #0d5adf 51%, #ffb2d2 100%);
+}
+
+</style>
+<body>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz2</title>
+    
+</head>
+<body>
+    <script>
+        let cost_sum=0;
+        function change_cost_sum(self){
+            let price=parseInt(self.value);
+
+            if(self.checked===true) cost_sum+=price;
+            else cost_sum-=price;
+
+            let show_price=document.querySelector("#show_price");
+            show_price.value=cost_sum;
+        }
+        
+
+    </script>
+    <form>
+        <input onclick=change_cost_sum(this) type="checkbox" value="10000" name="apple"> $1000 apple
+        <input onclick=change_cost_sum(this) type="checkbox" value="15000" name="pare"> $1500 pare
+        <input onclick=change_cost_sum(this) type="checkbox" value="20000" name="gold-smell"> $2000 gold-smell
+        <input onclick=change_cost_sum(this) type="checkbox" value="18000" name="grape"> $1800 grape
+        <input id="show_price" value="0">
+    </form> 
+</body>
+</html>
