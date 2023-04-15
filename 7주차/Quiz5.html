@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz5</title>
+    <script>
+        img_size_num=500;
+        function change_size(event_obj, self){
+            if(event_obj.wheelDelta<0){
+                img_size_num*=0.95;
+            }
+            else if(event_obj.wheelDelta>0) img_size_num*=1.05;
+            self.style.width=`${img_size_num}px`;
+        }
+    </script>
+</head>
+<body>
+    <img style="width:500px" onwheel="change_size(event, this)" src="img/tulips.png" alt="tulips">
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz4</title>
+</head>
+<body id="gogo">
+    <script>
+        const r_num=(Math.floor(Math.random()*1000))%256;
+        const g_num=(Math.floor(Math.random()*1000))%256;
+        const b_num=(Math.floor(Math.random()*1000))%256;
+        const rgb_string=`rgb(${r_num},${g_num},${b_num})`
+        let body=document.querySelector("#gogo");
+        addEventListener("dblclick",
+            function(){
+                body.style.backgroundColor=rgb_string;
+            }
+        )
+    </script>
+    <h1>Double click to change the background color!</h1>
+    <p>background color changes to random color
+       <br/> when you <strong>double-click</strong> anywhere.</p>
+</body>
+</html>

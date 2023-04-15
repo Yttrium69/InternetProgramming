@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz3</title>
+    <script>
+        function change_img(self){
+            const value=self.value;
+            const src=`./img/${value}.png`;
+            let img_node=document.querySelector("img");
+            img_node.src=src;
+            img_node.alt=value;
+        }
+    </script>
+</head>
+<body>
+    <h1>Click radio button to print image!</h1>
+    <form>
+        <input onclick=change_img(this) type="radio" name="fruit" value="banana">banana
+        <input onclick=change_img(this) type="radio" name="fruit" value="mango">mango
+        <input onclick=change_img(this) type="radio" name="fruit" value="apple">apple
+    </form>
+    <img src="" alt=""/>
+</body>
+</html>
