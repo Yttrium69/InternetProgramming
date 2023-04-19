@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz7</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+    span{
+        font-family: noto-sans-KR;
+        font-weight: 800;
+        font-size:150px;
+    }
+    span:hover{
+        cursor: pointer;
+        color: rgb(137, 184, 255);
+    }
+    .click{
+        color:rgb(10, 108, 255);
+    }
+    h3:hover{
+        cursor: pointer;
+        font-size: 1.3em;
+    }
+</style>
+<script>
+    function is_all_checked(){
+        let num_arr=document.querySelectorAll("span");
+        let all_checked=1;
+        for(let i=0;i<num_arr.length;i++) all_checked*=num_arr[i].dataset.has_clicked;
+        
+        if(all_checked===1) return true;
+        else return false;
+    }
+    function set_has_cliked(node){
+        node.dataset.has_clicked=1;
+        node.className="click";
+    }
+    function change_innerHTML(node){
+        const ran_num=Math.floor(Math.random()*10)%3;
+        node.innerHTML=ran_num;
+    }
+    function is_success(){
+        let num_arr=document.querySelectorAll("span");
+        let is_success=true;
+        let standard_num=num_arr[1].innerHTML;
+        for(let i=0;i<num_arr.length;i++){
+            if(standard_num!==num_arr[i].innerHTML) is_success=false;
+        }
+        return is_success;
+    }
+    function init(){
+        location.reload();
+    }
+    function change_num_of(self){
+        set_has_cliked(self);
+        change_innerHTML(self);
+        if(is_all_checked()===true){
+            if(is_success()===true){
+                let new_h3=document.createElement("h3");
+                document.querySelector("body").appendChild(new_h3);
+                new_h3.innerHTML="SUCCESS! (click here to do again)";
+                new_h3.onclick=init;
+            }
+            else{
+                let new_h3=document.createElement("h3");
+                document.querySelector("body").appendChild(new_h3);
+                new_h3.innerHTML="FAIL... (click here to do again)";
+                new_h3.onclick=init;
+            }
+        }
+    }
+</script>
+<body>
+    <h3>Let's Gamble!</h3>
+    <div class="div_show-pannel">
+        <span data-has_clicked=0 onclick=change_num_of(this)>0</span>
+        <span data-has_clicked=0 onclick=change_num_of(this)>0</span>
+        <span data-has_clicked=0 onclick=change_num_of(this)>0</span>
+    </div>
+</body>
+</html>

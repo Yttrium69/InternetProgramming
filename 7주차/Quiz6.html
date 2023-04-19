@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz6</title>
+    <script>
+        function size_up_this(self){
+            let li_arr=document.getElementsByTagName("li");
+            for(let i=0;i<li_arr.length;i++){
+                li_arr[i].style.fontSize="1em";
+            }
+            self.style.fontSize="1.3em";
+        }
+    </script>
+</head>
+<body>
+    <h3>In summer banghak I will...</h3>
+    <ul>
+        <li onclick=size_up_this(this) value="0">travel around Korea with bicycle</li>
+        <li onclick=size_up_this(this) value="1">read a hundred of books</li>
+        <li onclick=size_up_this(this) value="2">chellange the 3 of Ironman game</li>
+        <li onclick=size_up_this(this) value="3">conquer JS</li>
+    </ul>
+</body>
+</html>

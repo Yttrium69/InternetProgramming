@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const day=prompt("Enter the day.(ex: 월요일)");
+        let s="ERROR";
+        if(day==="일요일"||day==="토요일") {s="휴무";}
+        else {s="출근"}
+    
+        document.write(`<p>${day}은 ${s}입니다.</p>`);
+    </script>
+
+</body>
+</html>
