@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let sum=0;
+        function update_price(self){
+            price=parseInt(self.dataset.price);
+            if(self.checked===true) sum+=price;
+            else sum-= price;
+            document.querySelector("#show_pannel").value=sum;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input data-price=10000 onclick=update_price(this) type="checkbox"> 모자 1만원
+        <input data-price=30000 onclick=update_price(this) type="checkbox"> 구두 3만원
+        <input data-price=80000 onclick=update_price(this) type="checkbox"> 명품가방 8만원
+        <input id="show_pannel"onclick=update_price(this) type="text" value=0>
+    </form>
+</body>
+</html>

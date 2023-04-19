@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function appendDiv(self){
+            let parent=self.parentElement;
+            let new_div=document.createElement("div");
+            new_div.innerText=prompt("enther the text you want");
+            new_div.style.backgroundColor="yellowgreen";
+            parent.append
+        }
+    </script>
+    <p onclick=appendDiv(this) style="background-color: yellowgreen;">가보자고...</p>
+</body>
+</html>
